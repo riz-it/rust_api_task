@@ -16,7 +16,9 @@ use route::route::create_routes;
 
 #[tokio::main]
 async fn main() {
-    dotenv().expect("Cannot read .env");
+    if std::path::Path::new(".env").exists() {
+        dotenv().ok();
+    }    
 
     let server_address = std::env::var("SERVER_ADDRESS").unwrap_or("127.0.0.1:3000".to_string());
     let database_url = std::env::var("DATABASE_URL").expect("Missing DATABASE_URL");

@@ -29,7 +29,7 @@
 
    - **Linux/Mac**:
      ```bash
-     DOCKER_BUILDKIT=1 docker build -t https://github.com/riz-it/rust_api_task.git .
+     DOCKER_BUILDKIT=1 docker build --build-arg DATABASE_URL="yourdburl" -t https://github.com/riz-it/rust_api_task.git .
      ```
    - **Windows**:
      ```bash
