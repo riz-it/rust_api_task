@@ -1,0 +1,34 @@
+# Target output dari cargo
+src/target/
+
+# File konfigurasi editor/IDE
+*.rs.bk
+*.swp
+*.swo
+*.tmp
+*.bak
+*.old
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# File sistem
+.DS_Store
+Thumbs.db
+
+# Cache / temp
+**/__pycache__/
+*.log
+*.env
+*.env.*
+
+# File docker build sendiri
+Dockerfile
+docker-compose.yml
